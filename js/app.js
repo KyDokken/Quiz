@@ -10,10 +10,10 @@ $(document).ready(function () {
 
     //Question 2
                 {
-                    question: '',
-                    choices: ['Around 1500', 'Around 2500', 'Around 3500'],
-                    correct: 2,
-                    correctDetails: 'There are more than 3500 Car Manufacturers worldwide.'
+                    question: 'What is the most played competitive game?',
+                    choices: ['League of Legends', 'DOTA', 'CS:GO', 'SC:2', 'StarWars'],
+                    correct: 0,
+                    correctDetails: 'League of Legends has 67 million players a month.'
     },
 
     //Question 3
@@ -29,7 +29,7 @@ $(document).ready(function () {
                     question: 'Twitch averages how many viewers per month?',
                     choices: ['13,000,000', '29,000,000', '33,000,000', '6,000,000'],
                     correct: 0,
-                    correctDetails: 'The Grave Digger has 1500-2000 bhp.'
+                    correctDetails: '29Million average views a month!'
     },
 
     //Question 5
@@ -51,24 +51,34 @@ $(document).ready(function () {
 
             /* On quiz start */
 
-            $('.primarysection').hide();
-            $('.results').hide();
-
-            function questionDisplay() {
-                $('#questionNum').text("Question " + (questionNum + 1) + " of " + questionTotal);
-                $('#javaquestion').text(questions[questionNum].question);
-                $('.multiplechoicebox').empty();
-                var choiceTotal = question[questionNum].choices.length;
-                for (var i = 0; i < choiceTotal; i++) {
-                    $('#choices').append('<input type="radio" name="option" class="option" value="0"><span class="answer">' + questions[questionNum].choices[i] + '</span>');
-
-                }
-
-            }
+            $('#startButton').click(function () {
+                        $('.results').hide();
+                        $('.primary').hide();
+                        $('.questionbox').show();
+                        //Still have to empty display container
+                    }
 
 
-            /*
-            $('.startQuizButton').on('click', '.option', function () {
-                var answer = $("input(class'option']:checked").val();
-                */
-        }
+                    /* Hide Quiz+result when loaded */
+                    $('.primarysection').hide(); $('.results').hide();
+
+                    /* Display Questions function */
+
+
+                    function questionDisplay() {
+                        $('#questionNum').text("Question " + (questionNum + 1) + " of " + questionTotal);
+                        $('#javaquestion').text(questions[questionNum].question);
+                        $('.multiplechoicebox').empty();
+                        var choiceTotal = question[questionNum].choices.length;
+                        for (var i = 0; i < choiceTotal; i++) {
+                            $('#choices').append('<input type="radio" name="option" class="option" value="+ i +">" + " " + questions[questionNum].choices[i] + "<br>");
+
+                            }
+
+                        }
+
+
+                        /*
+                        $('.startQuizButton').on('click', '.option', function () {
+                            var answer = $("input(class'option']:checked").val();
+                            */
