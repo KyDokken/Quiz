@@ -17,7 +17,8 @@
     font-family: 'Rokkitt', serif;
 }
 
-General styles (General Module, wrapping around the modules bellow) (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li)) */ body {}
+
+/* General styles (General Module, wrapping around the modules bellow) (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li)) */
 
 body {
     background-image: url(../images/International-2015.jpg);
@@ -25,6 +26,12 @@ body {
     background-size: cover;
     text-align: center;
     color: mediumvioletred;
+}
+
+h1 {
+    font-size: 5em;
+    padding-top: 2rem;
+    letter-spacing: 5px;
 }
 
 .primarysection {
@@ -46,11 +53,6 @@ Header styles (Main Module)
 Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */
-
-h1 {
-    font-size: 5em;
-    padding-top: 2rem;
-}
 
 .intro {
     background-image: url("../images/transparent.jpg");

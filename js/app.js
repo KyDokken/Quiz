@@ -58,6 +58,9 @@ $(document).ready(function () {
                         //Still have to empty display container
                     }
 
+                    function pictureChange() {
+                        document.getElementById("startButton").src = ""
+                    }
 
                     /* Hide Quiz+result when loaded */
                     $('.primarysection').hide(); $('.results').hide();
