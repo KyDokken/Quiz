@@ -11,9 +11,9 @@ $(document).ready(function () {
     //Question 2
                 {
                     question: '',
-                    choices: ['Around 1500', 'Around 2500', 'Around 3500'],
+                    choices: ['', '', ''],
                     correct: 2,
-                    correctDetails: 'There are more than 3500 Car Manufacturers worldwide.'
+                    correctDetails: '.'
     },
 
     //Question 3
@@ -29,7 +29,7 @@ $(document).ready(function () {
                     question: 'Twitch averages how many viewers per month?',
                     choices: ['13,000,000', '29,000,000', '33,000,000', '6,000,000'],
                     correct: 0,
-                    correctDetails: 'The Grave Digger has 1500-2000 bhp.'
+                    correctDetails: ''
     },
 
     //Question 5
