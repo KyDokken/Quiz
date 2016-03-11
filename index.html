@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header class="top">
+        <h1> Esports quiz </h1>
+    </header>
+    <section class="intro">
+        <p>Test your knowledge on professional esports</p>
+        <button class="start-button" id="startQuizButton">Start</button>
+    </section>
+    <section class="primarysection">
+        <div class="questionbox">
+            <p id="javaquestion">What is the biggest prize pool in the history of Esports?</p>
+            <!-- Question box, center -->
+        </div>
+        <div class="multiplechoicebox">
+            <!-- Possible answers area -->
+            <input type="radio" name="option" class="option" value="0">
+            <span class="answer"></span>
+            <input type="radio" name="option" class="option" value="1">
+            <span class="answer"></span>
+            <input type="radio" name="option" class="option" value="2">
+            <span class="answer"></span>
+            <input type="radio" name="option" class="option" value="3">
+            <span class="answer"></span>
+            <input type="radio" name="option" class="option" value="4">
+            <span class="answer"></span>
+        </div>
+        <button class="submit" id="submitAnswer">Submit</button>
+        <div class="questionNum" id="questionNum"></div>
+    </section>
+    <section class="results">
+        <div class="feedback">
+            <!-- Score / 10 -->
+        </div>
+        <div class="feedbackbox">
+            <!-- Correct answer + information about the question -->
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

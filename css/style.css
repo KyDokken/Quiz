@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+    font-family: 'Rokkitt', serif;
+}
+
+General styles (General Module, wrapping around the modules bellow) (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li)) */ body {}
+
+body {
+    background-image: url(../images/International-2015.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: mediumvioletred;
+}
+
+.primarysection {
+    display: none;
+}
+
+p {
+    font-size: 2rem;
+}
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+h1 {
+    font-size: 3em;
+    padding-top: 2rem;
+}
+
+.intro {
+    background-image: url("../images/transparent.jpg");
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 33rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+}
+
+.questionbox {
+    background-image: url("../images/transparent.jpg");
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 33rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.multiplechoicebox {
+    display: inline-block;
+}
+
+.start-button {
+    margin-top: 0.6rem;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+
+/* Media Query Section */
