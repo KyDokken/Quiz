@@ -59,7 +59,7 @@ $(document).ready(function () {
                     }
 
                     function pictureChange() {
-                        document.getElementById("startButton").src = ""
+                        document.getElementById("startButton").src =
                     }
 
                     /* Hide Quiz+result when loaded */
