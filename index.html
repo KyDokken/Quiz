@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body id="body" style="background-image: url(../images/International-2015.jpg);">
     <header class="top">
         <h1> Esports quiz </h1>
     </header>
@@ -40,11 +40,13 @@
         <!-- Question box w/ total # etc -->
     </section>
     <section class="results">
+        <h3 class="wellDone" id="wellDone">Feedback</h3>
+        <h2 class="scoreTotal" id="scoreTotal">Score /5</h2>
+        <!-- Correct answer + information about the question -->
+        <!-- Score / 10 -->
+        <button class="TryAgain" id="tryAgain">Replay</button>
         <div class="feedback">
-            <!-- Score / 10 -->
-        </div>
-        <div class="feedbackbox">
-            <!-- Correct answer + information about the question -->
+
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
