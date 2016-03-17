@@ -20,10 +20,14 @@
 
 /* General styles (General Module, wrapping around the modules bellow) (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li)) */
 
-body {
-    background-image: url(../images/International-2015.jpg);
-    background-repeat: no-repeat;
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+}
+
+body {
     text-align: center;
     color: whitesmoke;
 }

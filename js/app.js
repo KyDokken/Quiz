@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     //Question 5
         {
-            question: 'What countries have won the largest total prize pools?',
+            question: 'Which country has won the largest in total earnings?',
             choices: ['UK', 'China', 'USA', 'Sweden', 'Korea'],
             correct: 1,
             correctDetails: 'China has just edged the USA at a massive 33,275,584 in prize pool earnings.'
@@ -55,30 +55,31 @@ $(document).ready(function () {
     /* On quiz start */
 
     $('#startButton').click(function () {
+        console.log("startButton");
         $('.intro').hide();
         $('.results').hide();
         $('.primarysection').show();
-        var urlString = 'url(../images/EG.jpg)';
-        document.getElementById("body").style.backgroundImage = urlString;
+        document.getElementById('html').style = "background: rgba(0, 0, 0, 0) url('images/EG.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;";
+        /*document.getElementById("html").style = "background: rgba(0, 0, 0, 0) url('images/EG.jpg') no-repeat center center fixed;"; */
         /* Clearing results container */
         $('#result_msg').empty();
         questionDisplay();
-    })
+    });
 
     /* submit button >< */
     $('#submitAnswer').click(function () {
         /* Hide current question, open next? */
         /* nextQuestion(); */
         var answer = $("input[class='option']:checked").val();
-        console.log(answer);
         var correctAnswer = questions[questionNum].correct;
-        console.log(correctAnswer);
         if (answer == correctAnswer) {
             //if correct answer was selected
             correctTotal++;
             console.log(correctTotal);
             //console.log(correctTotal);
+            playDing();
         }
+
         //quiz is finished, show result-section
         if ((questionNum + 1) == questionTotal) {
 
@@ -107,6 +108,7 @@ $(document).ready(function () {
 
     function questionDisplay() {
         $('#questionNum').text("Question " + (questionNum + 1) + " of " + questionTotal);
+        console.log(questionNum);
         $('#javaquestion').text(questions[questionNum].question);
         $('.multiplechoicebox').empty();
         var choiceTotal = questions[questionNum].choices.length;
@@ -115,13 +117,19 @@ $(document).ready(function () {
         }
     }
 
-    /* Results  >< */
+    // my sound functions (placement@?)
 
-    /* var scoreCheck = function () {
-         if (correctTotal == 5) {
-             $('correctTotal').text('Perfect score!');
-         } else {
-             $('correctTotal').text('A little off! You got' + ' ' + correctTotal + ' ' + 'questions'); */
+    function playDing() {
+        console.log("Ding");
+        $('#dingSound')[0].volume = 0.6;
+        /* $('#dingSound')[0].load(); */
+        $('#dingSound')[0].play();
 
+    }
+
+    function stopDing() {
+        $('#dingSound')[0].pause();
+        $('#dingSound')[0].currentTime = 0; //reset to 0
+    }
 
 });
